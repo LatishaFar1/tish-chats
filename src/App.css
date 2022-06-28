@@ -2,13 +2,106 @@
   text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
 *{
   background-color: black;
   color: #BE95C4;
 }
 
+/* HOME  */
+
 .Home{
   height: 100vh;
+}
+
+.home_title{
+  font-family: 'Titan One';
+  font-size: 50px;
+  text-align: center;
+}
+h4 {
+  color: #fff;
+  font-family: Monoton;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #9F86C0,
+      0 0 70px #9F86C0,
+      0 0 80px #9F86C0,
+      0 0 100px #9F86C0,
+      0 0 150px #9F86C0;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #5E548E,
+      0 0 35px #5E548E,
+      0 0 40px #5E548E,
+      0 0 50px #5E548E,
+      0 0 75px #5E548E;
+  }
+}
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #9F86C0,
+      0 0 70px #9F86C0,
+      0 0 80px #9F86C0,
+      0 0 100px #9F86C0,
+      0 0 150px #9F86C0,
+  }
+  to {
+    text-shadow: 0 0 5px #E0B1CB,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #5E548E,
+      0 0 35px #5E548E,
+      0 0 40px #5E548E,
+      0 0 50px #5E548E,
+      0 0 75px #5E548E;
+  }
+}
+
+/*glow*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #BE95C4,
+      0 0 20px #BE95C4,
+      0 0 30px #BE95C4,
+      0 0 40px #9F86C0,
+      0 0 70px #9F86C0,
+      0 0 80px #9F86C0,
+      0 0 100px #9F86C0,
+      0 0 150px #9F86C0;
+  }
+  to {
+    text-shadow: 0 0 5px #E0B1CB,
+      0 0 10px #BE95C4,
+      0 0 15px #BE95C4,
+      0 0 20px #5E548E,
+      0 0 35px #5E548E,
+      0 0 40px #5E548E,
+      0 0 50px #5E548E,
+      0 0 75px #5E548E;
+  }
 }
 
 
