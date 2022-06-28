@@ -105,9 +105,24 @@ h4 {
 }
 
 
-/* FOOTER */
-.footer{
+/* NAVBAR */
 
+.navbar{
+	background-color: #123;
+	background-image: linear-gradient(to bottom, #5E548E, transparent);
+	border-bottom: 1px solid #5E548E;
+	box-shadow: 0 0 32px #5E548E;
+	font-size: 2em;
+	font-weight: 300;
+  text-decoration: none;
 }
 
+.links{
+  color: #E0B1CB;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
+  justify-content: space-between;
+}
 
