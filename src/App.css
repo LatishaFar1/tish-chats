@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Titan One';
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
@@ -110,19 +111,29 @@ h4 {
 .navbar{
 	background-color: #123;
 	background-image: linear-gradient(to bottom, #5E548E, transparent);
-	border-bottom: 1px solid #5E548E;
+	border-bottom: 5px solid #5E548E;
 	box-shadow: 0 0 32px #5E548E;
-	font-size: 2em;
+	font-size: 30px;
 	font-weight: 300;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  height: 75px;
+  border-radius: 3px 3px 3px 3px;
 }
 
-.links{
+.links a{
   color: #E0B1CB;
-	padding: .75em;
-	text-align: center;
+	padding: 20px;
 	text-decoration: none;
 	transition: all .5s;
   justify-content: space-between;
+
 }
 
+.links :hover{
+  color: #9F86C0;
+  font-weight: 500;
+}
