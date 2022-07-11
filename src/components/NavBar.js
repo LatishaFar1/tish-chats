@@ -9,7 +9,11 @@ function NavBar() {
      
             <Link to="/chat">Chat</Link>
 
+            <Link to="/about">About</Link>
+
         </div>
+
+        <Link to="/register">Registration</Link>
 
 
     </div>
