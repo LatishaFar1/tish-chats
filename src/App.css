@@ -138,6 +138,17 @@ h4 {
   font-weight: 500;
 }
 
+.other-links a{
+  text-decoration: none;
+	transition: all .5s;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.other-links a:hover{
+  color: #5E548E;
+  font-weight: 500;
+}
 /* REGISTRATION */
 .register-h1{
   text-align: center;
