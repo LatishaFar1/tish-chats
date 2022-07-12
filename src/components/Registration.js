@@ -2,8 +2,11 @@ import React, {useState} from 'react'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {auth, db} from "../firebase";
 import {setDoc, doc, Timestamp} from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 function Registration() {
+
+    let navigate = useNavigate();
 
     const [data, setData] = useState({
         name: "",
@@ -45,6 +48,7 @@ function Registration() {
             password: "",
             error: null,
           });
+          navigate("/chat");
         } catch (error) {
           setData({ ...data, error: error.message});
         }
@@ -67,7 +71,7 @@ function Registration() {
 
             <div className='form-container'>
                 <label name="password">Password</label>
-                <input type="text" name="password"  value={password} onChange={handleChange}/>
+                <input type="password" name="password"  value={password} onChange={handleChange}/>
             </div>
             {error ? <h3 className='error'>{error}</h3> : null}
             <div className='register-button'>
