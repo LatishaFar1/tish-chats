@@ -20,8 +20,6 @@ function NavBar() {
     <div className='navbar'>
         <div className='links'>
             <Link to="/">Home</Link>
-    
-
             <Link to="/about">About</Link>
 
         </div>
