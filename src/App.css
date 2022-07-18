@@ -138,6 +138,7 @@ h4 {
   font-weight: 500;
 }
 
+
 .other-links a{
   text-decoration: none;
 	transition: all .5s;
@@ -148,6 +149,23 @@ h4 {
 .other-links a:hover{
   color: #5E548E;
   font-weight: 500;
+}
+
+.logout-button{
+  padding: 20px 0px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
+  transition: 0.3s ease-in-out all;
+  background-color: #BE95C4;
+  color: #fff;
+}
+
+.logout-button:hover{
+  background-color: black;
+  color: #BE95C4;
 }
 /* REGISTRATION */
 .register-h1{

@@ -6,11 +6,12 @@ import NavBar from './components/NavBar';
 import About from './components/About';
 import Registration from './components/Registration';
 import Login from "./components/Login";
-
+import Authorization from './context/Authorization';
 
 function App() {
   return (
     <div>
+    <Authorization>
       <Router>
       <NavBar/>
         <Routes>
@@ -22,6 +23,7 @@ function App() {
         </Routes>
 
       </Router>
+    </Authorization>
     </div>
   );
 }
