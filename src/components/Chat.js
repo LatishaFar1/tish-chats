@@ -1,13 +1,12 @@
-import { doc, getDocs, collection, query, onSnapshot} from 'firebase/firestore';
-import React, {useState, useEffect} from 'react'
-import {  BiUser } from 'react-icons/bi';
+import { getDocs, addDoc, Timestamp, collection,} from 'firebase/firestore';
+import React, {useState} from 'react'
 import { db} from '../firebase';
+import Login from './Login';
 
 
-
-function Chat() {
+function Chat({user}) {
   const [messages, setMessages] = useState([]);
-
+  const [text, setText] = useState("")
 
     getDocs(collection(db,  "messages"))
 
@@ -20,18 +19,33 @@ function Chat() {
       console.log(error.message)
     })
 
+
+    const handleChange = (e) => {
+      setText(e.target.value);
+    };
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      addDoc(collection(db, "messages"), {
+       text,
+       createdAt: Timestamp.fromDate(new Date())
+      })
+   
+    }
+
+
+
   return (
     <div>
-      {/* <form className='chat-form'>
-      <BiUser style={{height: "30px", width: "30px"}}/>
-       <input type="text" name="text"/>
-      </form> */}
+      <form className='chat-form' onSubmit={handleSubmit}>
+       <input onChange={handleChange} type="text" value={text} name="text"/>
+      </form>
     
         {messages && messages.map(({id, text}) => (
 
-              <div key={id}>
+              <div>
 
-                  <p>{text}</p>
+                  <p key={id}> {text}</p>
               </div>
         ))}
 

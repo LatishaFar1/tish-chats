@@ -5,7 +5,7 @@ import { doc,  updateDoc} from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 
-function Login() {
+function Login({user}) {
 
     let navigate = useNavigate();
 
