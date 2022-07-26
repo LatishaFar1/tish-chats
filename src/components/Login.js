@@ -5,7 +5,7 @@ import { doc,  updateDoc} from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
 
-function Login({user}) {
+function Login() {
 
     let navigate = useNavigate();
 
@@ -14,6 +14,8 @@ function Login({user}) {
         password: "",
         error: null
     });
+
+    const [user, setUser] = useState(null);
 
 
     const { email, password, error} = data;
@@ -34,7 +36,6 @@ function Login({user}) {
             email,
             password
           );
-          console.log(result.user);
           await updateDoc(doc(db, "users", result.user.uid), {
             isOnline: true,
           });
@@ -47,12 +48,17 @@ function Login({user}) {
         } catch (error) {
           setData({ ...data, error: error.message});
         }
+        setUser(user.uid);
       };
+      
+      
+
+     
 
   return (
     <div className='register'>
             <h1 className='register-h1'>Login</h1>
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} className="register-form">
             <br/>
 
             <div className='form-container'>
