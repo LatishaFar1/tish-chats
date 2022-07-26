@@ -11,16 +11,16 @@ function Chat({user}) {
   const [text, setText] = useState("");
 
 
-    // getDocs(collection(db,  "messages"))
+    getDocs(collection(db,  "messages"))
 
-    // .then((snapshot) => {
-    //   setMessages(
-    //     snapshot.docs.map(doc => doc.data())
-    //   )
-    // })
-    // .catch(error => {
-    //   console.log(error.message)
-    // })
+    .then((snapshot) => {
+      setMessages(
+        snapshot.docs.map(doc => doc.data())
+      )
+    })
+    .catch(error => {
+      console.log(error.message)
+    })
 
 
     const handleChange = (e) => {
@@ -49,7 +49,7 @@ function Chat({user}) {
       <div className="chat-box-overlay">   
       </div>
         <div className='chat-logs'>
-             <p>test message</p>
+           
                 {messages && messages.map(({id, text, user}) => (
 
                           <div key={id}>
