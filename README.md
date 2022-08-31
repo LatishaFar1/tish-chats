@@ -10,6 +10,7 @@ Authenticated users are then able to view the chat and submit messages (backend 
 
 ### DEMO
 
+https://tish-chats.netlify.app/
 
 https://user-images.githubusercontent.com/80432238/180907136-ea642764-0c1f-47d2-a74b-f7f2c3abb98b.mov
 
